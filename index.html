@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ProProp: NBA prop edges</title>
+<style>
+:root{--bg:#f4f1ea;--card:#fff;--line:#ddd6c8;--tx:#1d2630;--mut:#6b7684;--pos:#12805c;--neg:#c0453a;--acc:#b9770e;--chip:#ebe6da;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1720;--card:#17212c;--line:#263444;--tx:#e8edf2;--mut:#8a99a8;--pos:#4fd1a5;--neg:#e5766b;--acc:#f2b84b;--chip:#1f2c3a}}
+:root[data-theme="dark"]{--bg:#0f1720;--card:#17212c;--line:#263444;--tx:#e8edf2;--mut:#8a99a8;--pos:#4fd1a5;--neg:#e5766b;--acc:#f2b84b;--chip:#1f2c3a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.45 system-ui,-apple-system,Segoe UI,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+h1,h2{font-family:Georgia,"Times New Roman",serif;margin:0}
+h1{font-size:24px}h2{font-size:19px;margin-bottom:4px}
+main{max-width:1000px;margin:0 auto;padding:0 14px 24px}
+header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px;padding:14px 0 8px}
+.sub{color:var(--mut);font-size:13px}
+#strip{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:8px 0;border-bottom:1px solid var(--line);margin-bottom:14px}
+#chips{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:2px}
+.chip{flex:0 0 auto;scroll-snap-align:start;background:var(--chip);color:var(--tx);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font:inherit;font-weight:600;cursor:pointer;white-space:nowrap}
+.chip.on{background:var(--acc);border-color:var(--acc);color:#fff}
+button,input{font:inherit;color:var(--tx)}
+button:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px}
+.name{font-weight:700;font-size:16px}
+.pick{font-family:Georgia,serif;font-size:22px;font-weight:700}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;font-variant-numeric:tabular-nums}
+.stats div{background:var(--bg);border-radius:8px;padding:6px;text-align:center}
+.stats b{display:block;font-size:15px}.stats span{font-size:11px;color:var(--mut)}
+.pos{color:var(--pos)}.neg{color:var(--neg)}
+.add{align-self:flex-start;background:none;border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer}
+.add:hover{border-color:var(--acc)}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 0;border-top:1px solid var(--line)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;margin-top:14px}
+.filters{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:6px 0 12px}
+input{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:6px 8px;width:90px}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px}
+label{display:flex;flex-direction:column;gap:3px;font-size:12px;color:var(--mut)}
+.res{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.res div{background:var(--bg);border-radius:8px;padding:10px}
+#msg{border:1px solid var(--acc);border-radius:12px;padding:14px;margin-bottom:14px}
+summary{cursor:pointer;font-family:Georgia,serif;font-weight:700;font-size:17px}
+</style>
+</head>
+<body>
+<main>
+<header><h1>ProProp</h1><span class="sub" id="gen">No data loaded</span></header>
+
+<div id="msg" hidden>
+  <b>Load today’s data</b>
+  <p class="sub">Run the pipeline in Colab, download data.json, then pick it here. The page remembers it for next time.</p>
+  <input type="file" id="file" accept=".json" style="width:auto">
+</div>
+
+<div id="stale" class="sub" style="color:var(--neg);margin-bottom:8px" hidden></div>
+<div id="strip"><div id="chips"></div></div>
+<div class="filters"><label>Min projected minutes<input id="fmin" type="number" value="24"></label></div>
+<div id="main"></div>
+
+<section class="panel"><details><summary>EV calculator</summary>
+  <p class="sub">Enter your own projection and the book’s price for any prop.</p>
+  <div class="g">
+    <label>Line<input id="c-line" type="number" step="0.5" value="24.5"></label>
+    <label>Your projection<input id="c-proj" type="number" step="0.1" value="27"></label>
+    <label>Std dev<input id="c-sd" type="number" step="0.1" value="6"></label>
+    <label>Over odds<input id="c-over" type="number" value="-115"></label>
+    <label>Under odds<input id="c-under" type="number" value="-105"></label>
+  </div>
+  <div class="res" id="c-out"></div>
+</details></section>
+
+<section class="panel">
+  <h2>Slip <span class="sub" id="slipn"></span></h2>
+  <div id="slip"></div>
+  <p class="sub" id="slipsum"></p>
+  <button class="add" id="clear">Clear slip</button>
+</section>
+<p class="sub">How it projects: recent per-minute production (60% last 10 games, 40% season) times projected minutes, adjusted for the opponent’s defense against that stat and the expected game pace, with a normal curve built from recent game-to-game swings. Early in the season those adjustments are shrunk toward zero because samples are small. Injuries still need to be entered by hand in injuries.json.</p>
+</main>
+
+<script>
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const pct=(x,d=1)=>(x*100).toFixed(d)+"%";
+const fo=o=>o>0?"+"+o:""+o;
+const dec=o=>o>0?1+o/100:1+100/-o;
+const evf=(p,o)=>p*(dec(o)-1)-(1-p);
+const erf=x=>{const s=Math.sign(x);x=Math.abs(x);const t=1/(1+.3275911*x);return s*(1-(((((1.061405429*t-1.453152027)*t)+1.421413741)*t-.284496736)*t+.254829592)*t*Math.exp(-x*x))};
+const cdf=z=>.5*(1+erf(z/Math.SQRT2));
+const short=g=>g.split(" @ ").map(t=>t.split(" ").pop()).join(" @ ");
+
+let DATA=[],TEAMS={},BEST=[],SHOWN=[],view="best",slip=[];
+try{slip=JSON.parse(localStorage.getItem("pp-slip")||"[]")}catch(e){}
+
+function init(d,save){
+  DATA=d.props||[];TEAMS=d.teams||{};
+  if(save){try{localStorage.setItem("pp-data",JSON.stringify(d))}catch(e){}}
+  $("gen").textContent="Updated "+new Date(d.generated).toLocaleString();
+  const gd=new Date(d.generated);$("stale").hidden=gd.toDateString()===new Date().toDateString();$("stale").textContent="This data is from "+gd.toLocaleDateString()+". Run the pipeline again and load a fresh data.json to see today’s games.";
+  $("msg").hidden=true;
+  view="best";render();
+}
+
+function bestRows(){
+  const min=+$("fmin").value||0,m=new Map();
+  for(const r of DATA){
+    if(r.mins<min||(r.commence&&new Date(r.commence)<new Date()))continue;  // skip games already started
+    const k=r.player+"|"+r.market+"|"+r.side,c=m.get(k);
+    if(!c||r.ev>c.ev)m.set(k,r);  // best price across books
+  }
+  return [...m.values()].sort((a,b)=>b.ev-a.ev);
+}
+
+const MKT={PTS:"points",REB:"rebounds",AST:"assists","3PM":"threes",PRA:"PRA"};
+const sg=n=>(n>=0?"+":"")+n+"%";
+function mu(r){
+  if(!r.opp)return"";
+  return `<div class="sub">vs ${esc(r.opp)}: allows #${r.rk} most ${esc(MKT[r.market]||r.market)} · pace ${r.gp}<br>Adjustments: defense ${sg(r.da)}, pace ${sg(r.pa)} (base projection ${r.base})</div>`;
+}
+function teamCard(a){
+  const t=TEAMS[a];if(!t)return"";
+  const f=[["Pace",t.pace,"pace"],["Opp PTS",t.pts,"pts"],["Opp REB",t.reb,"reb"],["Opp AST",t.ast,"ast"],["Opp 3PM",t.tpm,"tpm"],["Opp FG%",t.fg,"fg"],["Opp 3P%",t.tp,"tp"],["Opp OREB",t.oreb,"oreb"],["Forced TOV",t.tov,"tov"],["Steals",t.stl,"stl"],["Blocks",t.blk,"blk"]];
+  return `<div class="card"><div><div class="name">${esc(t.name)}</div><div class="sub">${t.n} games · rank 1 = most allowed or highest</div></div><div class="stats" style="grid-template-columns:repeat(3,1fr)">${f.map(([l,v,k])=>`<div><b>${v}</b><span>${l} · #${t.rk[k]}</span></div>`).join("")}</div></div>`;
+}
+function teamCards(g){return [...new Set(BEST.filter(r=>r.game===g).map(r=>r.team))].map(teamCard).join("")}
+function stats(r){
+  return `<div class="stats"><div><b>${r.proj}</b><span>Proj</span></div><div><b>${pct(r.p,0)}</b><span>Win</span></div><div><b>${pct(r.hit,0)}</b><span>Hit L10</span></div><div><b class="${r.ev>=0?"pos":"neg"}">${pct(r.ev)}</b><span>EV</span></div></div>`;
+}
+function card(r,i){
+  return `<div class="card"><div><div class="name">${esc(r.player)}</div><div class="sub">${esc(r.team)} · ${esc(short(r.game))} · ${r.mins} min</div></div>
+  <div class="pick">${esc(r.side)} ${r.line} ${esc(r.market)}</div><div class="sub">${fo(r.odds)} at ${esc(r.book)}</div>${stats(r)}${mu(r)}
+  <button class="add" data-add="${i}">+ Add to slip</button></div>`;
+}
+
+function render(){
+  BEST=bestRows();
+  const games=[...new Set(BEST.map(r=>r.game))].sort();
+  if(view!=="best"&&view!=="defense"&&!games.includes(view))view="best";
+  const chip=(v,t)=>`<button class="chip ${v===view?"on":""}" data-v="${esc(v)}">${esc(t)}</button>`;
+  $("chips").innerHTML=chip("best","Best bets")+games.map(g=>chip(g,short(g))).join("")+chip("defense","Defense");
+  if(!DATA.length){$("main").innerHTML="";return}
+  if(view==="defense"){SHOWN=[];$("main").innerHTML=`<h2>Team defense and pace</h2><p class="sub">Opponent stats are per 100 possessions, weakest defenses first. Rank 1 allows the most; for pace, forced turnovers, steals and blocks, rank 1 is highest.</p><div class="cards" style="margin-top:8px">${Object.keys(TEAMS).sort((a,b)=>TEAMS[b].pts-TEAMS[a].pts).map(teamCard).join("")}</div>`;return}
+  if(view==="best"){
+    const seen=new Set(),top=[];
+    for(const r of BEST){if(r.ev<=0||seen.has(r.player))continue;seen.add(r.player);top.push(r);if(top.length>=12)break}
+    SHOWN=top;
+    $("main").innerHTML=`<h2>Best bets of the day</h2><p class="sub">Top ${top.length} by expected value, one per player, using the best price across books.</p><div class="cards">${top.map(card).join("")||"<p class='sub'>No positive-EV props with these filters.</p>"}</div>`;
+  }else{
+    const by={};BEST.filter(r=>r.game===view).forEach(r=>(by[r.player]=by[r.player]||[]).push(r));
+    const ps=Object.entries(by).map(([n,a])=>({n,a:a.sort((x,y)=>y.ev-x.ev).slice(0,3)})).sort((x,y)=>y.a[0].ev-x.a[0].ev);
+    SHOWN=ps.flatMap(p=>p.a);
+    $("main").innerHTML=`<h2>${esc(view)}</h2><div class="cards" style="margin-top:8px">${teamCards(view)}</div><p class="sub" style="margin-top:14px">Each player’s best props, ranked by expected value.</p><div class="cards" style="margin-top:8px">${ps.map(p=>`<div class="card"><div><div class="name">${esc(p.n)}</div><div class="sub">${esc(p.a[0].team)} · ${p.a[0].mins} min</div></div>${p.a.map(r=>`<div class="row"><div><b>${esc(r.side)} ${r.line} ${esc(r.market)}</b><div class="sub">${fo(r.odds)} ${esc(r.book)} · proj ${r.proj} · win ${pct(r.p,0)}</div></div><div style="text-align:right"><b class="${r.ev>=0?"pos":"neg"}">${pct(r.ev)}</b><br><button class="add" data-add="${SHOWN.indexOf(r)}">+ Slip</button></div></div>`).join("")}</div>`).join("")}</div>`;
+  }
+}
+
+function drawSlip(){
+  try{localStorage.setItem("pp-slip",JSON.stringify(slip))}catch(e){}
+  $("slipn").textContent=`(${slip.length})`;
+  $("slip").innerHTML=slip.map((r,i)=>`<div class="row"><span>${esc(r.player)} ${esc(r.side)} ${r.line} ${esc(r.market)} <span class="sub">${fo(r.odds)} ${esc(r.book)} · ${pct(r.p,0)}</span></span><button class="add" data-rm="${i}">Remove</button></div>`).join("")||'<p class="sub">Nothing yet. Add a pick from any card.</p>';
+  const gm={};slip.forEach(r=>gm[r.game]=(gm[r.game]||0)+1);
+  const corr=Object.entries(gm).filter(([,n])=>n>1);
+  $("slipsum").innerHTML=slip.length?`Win chance if every leg were independent: ${pct(slip.reduce((a,r)=>a*r.p,1))}.`+(corr.length?` Same-game legs are correlated, so this overstates it: ${corr.map(([g,n])=>esc(short(g))+" ("+n+")").join(", ")}.`:""):"";
+}
+
+function calc(){
+  const L=+$("c-line").value,P=+$("c-proj").value,S=Math.max(+$("c-sd").value,.1),po=1-cdf((L-P)/S);
+  const box=(s,p,o)=>{const e=evf(p,+o);return `<div><b>${s}</b><div>Win chance ${pct(p)}</div><div class="${e>=0?"pos":"neg"}">EV ${pct(e)} per $1</div></div>`};
+  $("c-out").innerHTML=box("Over",po,$("c-over").value)+box("Under",1-po,$("c-under").value);
+}
+
+$("chips").addEventListener("click",e=>{const v=e.target.dataset.v;if(v==null)return;view=v;render();window.scrollTo(0,0)});
+$("main").addEventListener("click",e=>{const i=e.target.dataset.add;if(i==null)return;slip.push(SHOWN[i]);drawSlip()});
+$("slip").addEventListener("click",e=>{const i=e.target.dataset.rm;if(i==null)return;slip.splice(i,1);drawSlip()});
+$("clear").onclick=()=>{slip=[];drawSlip()};
+$("fmin").addEventListener("input",render);
+["c-line","c-proj","c-sd","c-over","c-under"].forEach(id=>$(id).addEventListener("input",calc));
+$("file").onchange=async e=>{try{init(JSON.parse(await e.target.files[0].text()),true)}catch(err){alert("That file is not valid JSON.")}};
+
+(async()=>{
+  try{const r=await fetch("data.json?"+Date.now());if(!r.ok)throw 0;init(await r.json(),false);return}catch(e){}
+  try{const s=localStorage.getItem("pp-data");if(s){init(JSON.parse(s),false);return}}catch(e){}
+  $("msg").hidden=false;
+})();
+drawSlip();calc();
+</script>
+</body>
+</html>
