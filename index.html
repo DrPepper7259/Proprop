@@ -32,6 +32,9 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-of
 .stats div{background:var(--bg);border-radius:8px;padding:6px;text-align:center}
 .stats b{display:block;font-size:15px}.stats span{font-size:11px;color:var(--mut)}
 .pos{color:var(--pos)}.neg{color:var(--neg)}
+.why{display:grid;gap:3px;font-size:13px}
+.badge{text-align:center;background:var(--acc);color:#fff;border-radius:10px;padding:4px 10px;min-width:56px;height:fit-content}
+.badge b{display:block;font-size:20px}.badge span{font-size:11px}
 .add{align-self:flex-start;background:none;border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer}
 .add:hover{border-color:var(--acc)}
 .row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 0;border-top:1px solid var(--line)}
@@ -79,7 +82,7 @@ summary{cursor:pointer;font-family:Georgia,serif;font-weight:700;font-size:17px}
   <p class="sub" id="slipsum"></p>
   <button class="add" id="clear">Clear slip</button>
 </section>
-<p class="sub">How it projects: recent per-minute production (60% last 10 games, 40% season) times projected minutes, adjusted for the opponent’s defense against that stat and the expected game pace, with a normal curve built from recent game-to-game swings. Early in the season those adjustments are shrunk toward zero because samples are small. Injuries still need to be entered by hand in injuries.json.</p>
+<p class="sub">How it projects: recent per-minute production (60% last 10 games, 40% season) times projected minutes, adjusted for the opponent’s defense against that stat and the expected game pace, with a normal curve built from recent game-to-game swings. Early in the season those adjustments are shrunk toward zero because samples are small. Injuries still need to be entered by hand in injuries.json. The score is a ranking aid, not a guarantee, and it has not been backtested.</p>
 </main>
 
 <script>
@@ -109,17 +112,37 @@ function bestRows(){
   const min=+$("fmin").value||0,m=new Map();
   for(const r of DATA){
     if(r.mins<min||(r.commence&&new Date(r.commence)<new Date()))continue;  // skip games already started
+    scoreRow(r);
     const k=r.player+"|"+r.market+"|"+r.side,c=m.get(k);
-    if(!c||r.ev>c.ev)m.set(k,r);  // best price across books
+    if(!c||r.score>c.score)m.set(k,r);  // best book for this pick
   }
-  return [...m.values()].sort((a,b)=>b.ev-a.ev);
+  return [...m.values()].sort((a,b)=>b.score-a.score);
 }
 
 const MKT={PTS:"points",REB:"rebounds",AST:"assists","3PM":"threes",PRA:"PRA"};
 const sg=n=>(n>=0?"+":"")+n+"%";
-function mu(r){
-  if(!r.opp)return"";
-  return `<div class="sub">vs ${esc(r.opp)}: allows #${r.rk} most ${esc(MKT[r.market]||r.market)} · pace ${r.gp}<br>Adjustments: defense ${sg(r.da)}, pace ${sg(r.pa)} (base projection ${r.base})</div>`;
+const cl=(x,a=-1,b=1)=>Math.max(a,Math.min(b,x));
+const DKEYS={PTS:["pts","fg"],REB:["reb","oreb"],AST:["ast"],"3PM":["tpm","tp"],PRA:["pra"]};
+const DLAB={pts:"points",fg:"FG%",reb:"rebounds",oreb:"offensive rebounds",ast:"assists",tpm:"threes",tp:"3P%",pra:"PRA"};
+// Each signal runs from -1 (argues against this pick) to +1 (supports it), already flipped for Over vs Under.
+function scoreRow(r){
+  const s=r.side==="Over"?1:-1,t=TEAMS[r.opp],keys=DKEYS[r.market]||[];
+  const gap=cl(s*(r.proj-r.line)/Math.max(r.sd,1));
+  const form=cl((r.hit-.5)*2);
+  const mt=t&&keys.length?cl(s*keys.reduce((a,k)=>a+(15.5-t.rk[k])/14.5,0)/keys.length):0;
+  const pace=cl(s*(r.pa||0)/5);
+  const val=cl(r.ev/.1);
+  const mins=cl(s*(r.mins-26)/10);
+  r.sig={gap,form,mt,pace,val,mins};
+  r.score=Math.round(50+50*(.30*gap+.20*mt+.20*form+.10*pace+.15*val+.05*mins));
+  r.ok=gap>.15&&mt>-.25&&form>-.3&&r.ev>-.03;
+}
+const mark=v=>v>.2?"✓":v<-.2?"✗":"–";
+function why(r){
+  const g=r.sig,t=TEAMS[r.opp],keys=DKEYS[r.market]||[];
+  const d=t?`${r.opp} allows ${keys.map(k=>`#${t.rk[k]} most ${DLAB[k]}`).join(", ")}`:"No opponent data";
+  const L=[[g.gap,`Projection ${r.proj} vs line ${r.line}`],[g.form,`Hit this side in ${pct(r.hit,0)} of last 10`],[g.mt,d],[g.pace,`Pace ${r.gp||"n/a"} (${sg(r.pa||0)} effect)`],[g.val,`Price ${fo(r.odds)}: ${pct(r.ev)} expected value`]];
+  return `<div class="why">${L.map(([v,x])=>`<div class="${v>.2?"pos":v<-.2?"neg":"sub"}">${mark(v)} ${esc(x)}</div>`).join("")}</div>`;
 }
 function teamCard(a){
   const t=TEAMS[a];if(!t)return"";
@@ -131,8 +154,8 @@ function stats(r){
   return `<div class="stats"><div><b>${r.proj}</b><span>Proj</span></div><div><b>${pct(r.p,0)}</b><span>Win</span></div><div><b>${pct(r.hit,0)}</b><span>Hit L10</span></div><div><b class="${r.ev>=0?"pos":"neg"}">${pct(r.ev)}</b><span>EV</span></div></div>`;
 }
 function card(r,i){
-  return `<div class="card"><div><div class="name">${esc(r.player)}</div><div class="sub">${esc(r.team)} · ${esc(short(r.game))} · ${r.mins} min</div></div>
-  <div class="pick">${esc(r.side)} ${r.line} ${esc(r.market)}</div><div class="sub">${fo(r.odds)} at ${esc(r.book)}</div>${stats(r)}${mu(r)}
+  return `<div class="card"><div style="display:flex;justify-content:space-between;gap:8px"><div><div class="name">${esc(r.player)}</div><div class="sub">${esc(r.team)} · ${esc(short(r.game))} · ${r.mins} min</div></div><div class="badge"><b>${r.score}</b><span>score</span></div></div>
+  <div class="pick">${esc(r.side)} ${r.line} ${esc(r.market)}</div><div class="sub">${fo(r.odds)} at ${esc(r.book)}</div>${stats(r)}${why(r)}
   <button class="add" data-add="${i}">+ Add to slip</button></div>`;
 }
 
@@ -146,14 +169,14 @@ function render(){
   if(view==="defense"){SHOWN=[];$("main").innerHTML=`<h2>Team defense and pace</h2><p class="sub">Opponent stats are per 100 possessions, weakest defenses first. Rank 1 allows the most; for pace, forced turnovers, steals and blocks, rank 1 is highest.</p><div class="cards" style="margin-top:8px">${Object.keys(TEAMS).sort((a,b)=>TEAMS[b].pts-TEAMS[a].pts).map(teamCard).join("")}</div>`;return}
   if(view==="best"){
     const seen=new Set(),top=[];
-    for(const r of BEST){if(r.ev<=0||seen.has(r.player))continue;seen.add(r.player);top.push(r);if(top.length>=12)break}
+    for(const r of BEST){if(!r.ok||seen.has(r.player))continue;seen.add(r.player);top.push(r);if(top.length>=12)break}
     SHOWN=top;
-    $("main").innerHTML=`<h2>Best bets of the day</h2><p class="sub">Top ${top.length} by expected value, one per player, using the best price across books.</p><div class="cards">${top.map(card).join("")||"<p class='sub'>No positive-EV props with these filters.</p>"}</div>`;
+    $("main").innerHTML=`<h2>Best bets of the day</h2><p class="sub">Ranked by a conviction score that blends projection gap, recent hit rate, opponent defense for that stat, pace, minutes and price. A pick is left out if the projection, recent form or matchup points the other way.</p><div class="cards">${top.map(card).join("")||"<p class='sub'>No picks pass every check right now.</p>"}</div>`;
   }else{
     const by={};BEST.filter(r=>r.game===view).forEach(r=>(by[r.player]=by[r.player]||[]).push(r));
-    const ps=Object.entries(by).map(([n,a])=>({n,a:a.sort((x,y)=>y.ev-x.ev).slice(0,3)})).sort((x,y)=>y.a[0].ev-x.a[0].ev);
+    const ps=Object.entries(by).map(([n,a])=>({n,a:a.sort((x,y)=>y.score-x.score).slice(0,3)})).sort((x,y)=>y.a[0].score-x.a[0].score);
     SHOWN=ps.flatMap(p=>p.a);
-    $("main").innerHTML=`<h2>${esc(view)}</h2><div class="cards" style="margin-top:8px">${teamCards(view)}</div><p class="sub" style="margin-top:14px">Each player’s best props, ranked by expected value.</p><div class="cards" style="margin-top:8px">${ps.map(p=>`<div class="card"><div><div class="name">${esc(p.n)}</div><div class="sub">${esc(p.a[0].team)} · ${p.a[0].mins} min</div></div>${p.a.map(r=>`<div class="row"><div><b>${esc(r.side)} ${r.line} ${esc(r.market)}</b><div class="sub">${fo(r.odds)} ${esc(r.book)} · proj ${r.proj} · win ${pct(r.p,0)}</div></div><div style="text-align:right"><b class="${r.ev>=0?"pos":"neg"}">${pct(r.ev)}</b><br><button class="add" data-add="${SHOWN.indexOf(r)}">+ Slip</button></div></div>`).join("")}</div>`).join("")}</div>`;
+    $("main").innerHTML=`<h2>${esc(view)}</h2><div class="cards" style="margin-top:8px">${teamCards(view)}</div><p class="sub" style="margin-top:14px">Each player’s best props, ranked by conviction score. A ⚠ means the projection, recent form or matchup disagrees with the pick.</p><div class="cards" style="margin-top:8px">${ps.map(p=>`<div class="card"><div><div class="name">${esc(p.n)}</div><div class="sub">${esc(p.a[0].team)} · ${p.a[0].mins} min</div></div>${p.a.map(r=>`<div class="row"><div><b>${esc(r.side)} ${r.line} ${esc(r.market)}</b><div class="sub">${fo(r.odds)} ${esc(r.book)} · proj ${r.proj} · win ${pct(r.p,0)}</div></div><div style="text-align:right"><b>${r.score}${r.ok?"":" ⚠"}</b><div class="sub">EV ${pct(r.ev)}</div><button class="add" data-add="${SHOWN.indexOf(r)}">+ Slip</button></div></div>`).join("")}</div>`).join("")}</div>`;
   }
 }
 
