@@ -3831,3 +3831,93 @@ GAME_ID,PLAYER_NAME,TEAM_ABBREVIATION,TEAM_NAME,OPP,GAME_DATE,MIN,PTS,REB,AST,FG
 401909975,Branden Carlson,POR,Portland Trail Blazers,OKC,2026-11-11,10.0,0.0,2.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0
 401909975,Jrue Holiday,POR,Portland Trail Blazers,OKC,2026-11-11,30.0,19.0,3.0,5.0,5.0,8.0,5.0,12.0,4.0,0.0,3.0,2.0,0.0
 401909975,Scoot Henderson,POR,Portland Trail Blazers,OKC,2026-11-11,19.0,5.0,2.0,2.0,1.0,3.0,2.0,7.0,0.0,0.0,2.0,0.0,0.0
+401909976,RJ Barrett,TOR,Toronto Raptors,PHI,2026-11-12,37.0,31.0,14.0,5.0,4.0,7.0,13.0,20.0,2.0,0.0,3.0,0.0,0.0
+401909976,Collin Murray-Boyles,TOR,Toronto Raptors,PHI,2026-11-12,32.0,14.0,0.0,4.0,1.0,1.0,5.0,9.0,4.0,0.0,2.0,1.0,5.0
+401909976,Jakob Poeltl,TOR,Toronto Raptors,PHI,2026-11-12,25.0,9.0,5.0,3.0,0.0,0.0,3.0,7.0,4.0,1.0,0.0,1.0,0.0
+401909976,Immanuel Quickley,TOR,Toronto Raptors,PHI,2026-11-12,28.0,26.0,4.0,6.0,3.0,7.0,8.0,16.0,8.0,0.0,0.0,1.0,1.0
+401909976,Ja'Kobe Walter,TOR,Toronto Raptors,PHI,2026-11-12,32.0,6.0,5.0,0.0,1.0,6.0,2.0,8.0,2.0,2.0,2.0,1.0,0.0
+401909976,Kyle Anderson,TOR,Toronto Raptors,PHI,2026-11-12,5.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+401909976,Jamison Battle,TOR,Toronto Raptors,PHI,2026-11-12,25.0,13.0,1.0,1.0,3.0,6.0,5.0,9.0,0.0,1.0,0.0,1.0,1.0
+401909976,Allen Graves,TOR,Toronto Raptors,PHI,2026-11-12,13.0,0.0,2.0,0.0,0.0,2.0,0.0,2.0,0.0,1.0,1.0,0.0,0.0
+401909976,Malachi Smith,TOR,Toronto Raptors,PHI,2026-11-12,2.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+401909976,Jamal Shead,TOR,Toronto Raptors,PHI,2026-11-12,22.0,5.0,1.0,5.0,1.0,4.0,1.0,6.0,2.0,0.0,2.0,1.0,0.0
+401909976,Jaden Bradley,TOR,Toronto Raptors,PHI,2026-11-12,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0
+401909976,Alijah Martin,TOR,Toronto Raptors,PHI,2026-11-12,18.0,7.0,4.0,1.0,1.0,3.0,3.0,6.0,0.0,1.0,1.0,1.0,0.0
+401909976,Dean Wade,PHI,Philadelphia 76ers,TOR,2026-11-12,34.0,6.0,5.0,2.0,2.0,5.0,2.0,6.0,0.0,3.0,0.0,0.0,0.0
+401909976,Joel Embiid,PHI,Philadelphia 76ers,TOR,2026-11-12,28.0,20.0,4.0,3.0,0.0,3.0,7.0,17.0,7.0,1.0,2.0,1.0,1.0
+401909976,Jaylen Brown,PHI,Philadelphia 76ers,TOR,2026-11-12,36.0,18.0,6.0,2.0,0.0,1.0,8.0,15.0,4.0,1.0,5.0,2.0,1.0
+401909976,Tyrese Maxey,PHI,Philadelphia 76ers,TOR,2026-11-12,35.0,27.0,2.0,8.0,1.0,4.0,8.0,13.0,12.0,0.0,2.0,2.0,1.0
+401909976,VJ Edgecombe,PHI,Philadelphia 76ers,TOR,2026-11-12,36.0,15.0,8.0,8.0,1.0,4.0,7.0,12.0,0.0,1.0,0.0,3.0,1.0
+401909976,Jabari Walker,PHI,Philadelphia 76ers,TOR,2026-11-12,16.0,9.0,8.0,1.0,1.0,2.0,4.0,8.0,0.0,4.0,0.0,0.0,0.0
+401909976,Justin Edwards,PHI,Philadelphia 76ers,TOR,2026-11-12,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+401909976,Tacko Fall,PHI,Philadelphia 76ers,TOR,2026-11-12,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+401909976,Kentavious Caldwell-Pope,PHI,Philadelphia 76ers,TOR,2026-11-12,27.0,11.0,4.0,5.0,3.0,5.0,4.0,7.0,0.0,1.0,0.0,1.0,1.0
+401909976,Anfernee Simons,PHI,Philadelphia 76ers,TOR,2026-11-12,23.0,17.0,3.0,2.0,5.0,6.0,6.0,9.0,0.0,0.0,0.0,0.0,0.0
+401909976,Caleb Love,PHI,Philadelphia 76ers,TOR,2026-11-12,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+401909976,Labaron Philon Jr.,PHI,Philadelphia 76ers,TOR,2026-11-12,2.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+401909977,Duncan Robinson,DET,Detroit Pistons,WSH,2026-11-12,41.0,13.0,3.0,1.0,3.0,11.0,5.0,14.0,0.0,0.0,1.0,1.0,0.0
+401909977,John Collins,DET,Detroit Pistons,WSH,2026-11-12,25.0,10.0,4.0,0.0,2.0,3.0,3.0,8.0,2.0,0.0,3.0,0.0,1.0
+401909977,Cade Cunningham,DET,Detroit Pistons,WSH,2026-11-12,48.0,52.0,5.0,11.0,3.0,5.0,16.0,25.0,18.0,0.0,0.0,1.0,1.0
+401909977,Ausar Thompson,DET,Detroit Pistons,WSH,2026-11-12,43.0,17.0,11.0,11.0,0.0,1.0,8.0,15.0,2.0,5.0,3.0,3.0,3.0
+401909977,Daniss Jenkins,DET,Detroit Pistons,WSH,2026-11-12,42.0,21.0,6.0,0.0,3.0,5.0,6.0,11.0,6.0,2.0,0.0,2.0,0.0
+401909977,Paul Reed,DET,Detroit Pistons,WSH,2026-11-12,38.0,13.0,11.0,3.0,0.0,1.0,5.0,9.0,6.0,5.0,2.0,0.0,0.0
+401909977,Ronald Holland II,DET,Detroit Pistons,WSH,2026-11-12,14.0,2.0,5.0,2.0,0.0,2.0,1.0,6.0,0.0,1.0,1.0,0.0,1.0
+401909977,Javonte Green,DET,Detroit Pistons,WSH,2026-11-12,15.0,5.0,1.0,0.0,1.0,3.0,2.0,4.0,0.0,0.0,0.0,2.0,0.0
+401909977,Kevin Huerter,DET,Detroit Pistons,WSH,2026-11-12,24.0,11.0,1.0,0.0,1.0,4.0,3.0,7.0,5.0,0.0,1.0,1.0,0.0
+401909977,Anthony Davis,WSH,Washington Wizards,DET,2026-11-12,44.0,30.0,15.0,4.0,0.0,1.0,13.0,21.0,4.0,2.0,2.0,1.0,0.0
+401909977,AJ Dybantsa,WSH,Washington Wizards,DET,2026-11-12,44.0,5.0,8.0,4.0,1.0,4.0,2.0,10.0,0.0,1.0,4.0,1.0,1.0
+401909977,Kyshawn George,WSH,Washington Wizards,DET,2026-11-12,26.0,14.0,1.0,5.0,3.0,3.0,5.0,7.0,2.0,0.0,1.0,0.0,1.0
+401909977,Alex Sarr,WSH,Washington Wizards,DET,2026-11-12,44.0,30.0,9.0,2.0,4.0,6.0,12.0,14.0,4.0,3.0,2.0,2.0,1.0
+401909977,Trae Young,WSH,Washington Wizards,DET,2026-11-12,45.0,37.0,2.0,14.0,4.0,8.0,8.0,23.0,17.0,1.0,4.0,0.0,0.0
+401909977,Deandre Ayton,WSH,Washington Wizards,DET,2026-11-12,9.0,2.0,4.0,0.0,0.0,0.0,1.0,1.0,0.0,2.0,0.0,0.0,1.0
+401909977,Bub Carrington,WSH,Washington Wizards,DET,2026-11-12,16.0,2.0,0.0,2.0,0.0,3.0,1.0,6.0,0.0,0.0,1.0,0.0,0.0
+401909977,Bilal Coulibaly,WSH,Washington Wizards,DET,2026-11-12,29.0,4.0,7.0,0.0,0.0,2.0,2.0,5.0,0.0,2.0,0.0,1.0,2.0
+401909977,Will Riley,WSH,Washington Wizards,DET,2026-11-12,3.0,3.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0
+401909977,Tre Johnson,WSH,Washington Wizards,DET,2026-11-12,30.0,13.0,4.0,2.0,1.0,9.0,5.0,14.0,2.0,3.0,2.0,1.0,0.0
+401909978,Caleb Martin,DAL,Dallas Mavericks,MIN,2026-11-12,21.0,7.0,2.0,5.0,1.0,3.0,3.0,6.0,0.0,0.0,1.0,2.0,0.0
+401909978,Daniel Gafford,DAL,Dallas Mavericks,MIN,2026-11-12,16.0,3.0,3.0,1.0,0.0,0.0,1.0,2.0,2.0,1.0,1.0,0.0,2.0
+401909978,P.J. Washington,DAL,Dallas Mavericks,MIN,2026-11-12,16.0,10.0,3.0,0.0,1.0,4.0,4.0,7.0,1.0,0.0,2.0,0.0,0.0
+401909978,Cooper Flagg,DAL,Dallas Mavericks,MIN,2026-11-12,27.0,12.0,7.0,3.0,1.0,2.0,5.0,12.0,2.0,2.0,2.0,2.0,0.0
+401909978,Kyrie Irving,DAL,Dallas Mavericks,MIN,2026-11-12,27.0,10.0,3.0,4.0,2.0,6.0,4.0,11.0,0.0,1.0,1.0,0.0,1.0
+401909978,Naji Marshall,DAL,Dallas Mavericks,MIN,2026-11-12,23.0,13.0,1.0,4.0,1.0,4.0,4.0,10.0,4.0,1.0,2.0,2.0,0.0
+401909978,Santi Aldama,DAL,Dallas Mavericks,MIN,2026-11-12,10.0,3.0,1.0,1.0,1.0,4.0,1.0,6.0,0.0,1.0,1.0,1.0,1.0
+401909978,Morez Johnson Jr.,DAL,Dallas Mavericks,MIN,2026-11-12,13.0,0.0,2.0,0.0,0.0,1.0,0.0,4.0,0.0,1.0,2.0,0.0,0.0
+401909978,Tobi Lawal,DAL,Dallas Mavericks,MIN,2026-11-12,12.0,0.0,6.0,1.0,0.0,1.0,0.0,2.0,0.0,5.0,0.0,0.0,0.0
+401909978,Zaccharie Risacher,DAL,Dallas Mavericks,MIN,2026-11-12,25.0,22.0,6.0,3.0,4.0,8.0,9.0,14.0,0.0,1.0,1.0,2.0,1.0
+401909978,Moussa Cisse,DAL,Dallas Mavericks,MIN,2026-11-12,8.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0
+401909978,Marcus Sasser,DAL,Dallas Mavericks,MIN,2026-11-12,9.0,3.0,1.0,0.0,0.0,4.0,1.0,5.0,2.0,0.0,1.0,0.0,0.0
+401909978,Max Christie,DAL,Dallas Mavericks,MIN,2026-11-12,7.0,3.0,2.0,0.0,1.0,2.0,1.0,2.0,0.0,0.0,0.0,0.0,1.0
+401909978,Walter Clayton Jr.,DAL,Dallas Mavericks,MIN,2026-11-12,22.0,5.0,1.0,4.0,0.0,5.0,1.0,8.0,3.0,1.0,5.0,0.0,0.0
+401909978,Jett Howard,DAL,Dallas Mavericks,MIN,2026-11-12,5.0,3.0,0.0,0.0,1.0,4.0,1.0,4.0,0.0,0.0,0.0,0.0,0.0
+401909978,Jaden McDaniels,MIN,Minnesota Timberwolves,DAL,2026-11-12,25.0,16.0,9.0,3.0,0.0,3.0,7.0,12.0,2.0,4.0,3.0,0.0,1.0
+401909978,Jonathan Kuminga,MIN,Minnesota Timberwolves,DAL,2026-11-12,24.0,14.0,8.0,5.0,1.0,3.0,6.0,11.0,2.0,0.0,3.0,2.0,0.0
+401909978,Rudy Gobert,MIN,Minnesota Timberwolves,DAL,2026-11-12,23.0,9.0,6.0,1.0,0.0,0.0,4.0,6.0,1.0,2.0,1.0,1.0,2.0
+401909978,Ayo Dosunmu,MIN,Minnesota Timberwolves,DAL,2026-11-12,27.0,18.0,2.0,1.0,2.0,4.0,8.0,15.0,0.0,0.0,1.0,1.0,1.0
+401909978,LaMelo Ball,MIN,Minnesota Timberwolves,DAL,2026-11-12,25.0,22.0,3.0,9.0,6.0,10.0,8.0,14.0,0.0,0.0,4.0,2.0,0.0
+401909978,Trey Lyles,MIN,Minnesota Timberwolves,DAL,2026-11-12,15.0,2.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0
+401909978,Cody Williams,MIN,Minnesota Timberwolves,DAL,2026-11-12,7.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+401909978,Isaiah Evans,MIN,Minnesota Timberwolves,DAL,2026-11-12,8.0,2.0,1.0,0.0,0.0,2.0,1.0,3.0,0.0,0.0,0.0,0.0,0.0
+401909978,Joan Beringer,MIN,Minnesota Timberwolves,DAL,2026-11-12,22.0,13.0,9.0,0.0,0.0,0.0,4.0,5.0,8.0,1.0,1.0,0.0,3.0
+401909978,Jaylen Clark,MIN,Minnesota Timberwolves,DAL,2026-11-12,19.0,7.0,6.0,2.0,1.0,3.0,3.0,5.0,0.0,1.0,1.0,1.0,0.0
+401909978,Terrence Shannon Jr.,MIN,Minnesota Timberwolves,DAL,2026-11-12,21.0,6.0,2.0,4.0,0.0,1.0,3.0,8.0,0.0,0.0,1.0,1.0,0.0
+401909978,Bones Hyland,MIN,Minnesota Timberwolves,DAL,2026-11-12,23.0,24.0,3.0,8.0,5.0,6.0,7.0,10.0,6.0,0.0,1.0,2.0,0.0
+401909979,Moussa Diabate,CHA,Charlotte Hornets,PHX,2026-11-12,32.0,7.0,13.0,2.0,0.0,0.0,3.0,7.0,2.0,8.0,4.0,0.0,1.0
+401909979,Naz Reid,CHA,Charlotte Hornets,PHX,2026-11-12,34.0,16.0,8.0,3.0,1.0,5.0,6.0,18.0,5.0,0.0,4.0,2.0,1.0
+401909979,Grayson Allen,CHA,Charlotte Hornets,PHX,2026-11-12,34.0,14.0,4.0,6.0,4.0,8.0,5.0,11.0,0.0,0.0,4.0,1.0,0.0
+401909979,Coby White,CHA,Charlotte Hornets,PHX,2026-11-12,20.0,21.0,3.0,3.0,2.0,7.0,8.0,16.0,3.0,1.0,4.0,0.0,0.0
+401909979,Sion James,CHA,Charlotte Hornets,PHX,2026-11-12,32.0,3.0,8.0,6.0,0.0,2.0,1.0,5.0,2.0,0.0,5.0,1.0,0.0
+401909979,Royce O'Neale,CHA,Charlotte Hornets,PHX,2026-11-12,22.0,7.0,4.0,0.0,2.0,5.0,2.0,5.0,1.0,0.0,2.0,0.0,0.0
+401909979,Grant Williams,CHA,Charlotte Hornets,PHX,2026-11-12,16.0,11.0,2.0,1.0,2.0,4.0,3.0,5.0,3.0,2.0,0.0,0.0,1.0
+401909979,Tidjane Salaun,CHA,Charlotte Hornets,PHX,2026-11-12,16.0,2.0,4.0,0.0,0.0,2.0,1.0,3.0,0.0,1.0,0.0,0.0,0.0
+401909979,Ryan Kalkbrenner,CHA,Charlotte Hornets,PHX,2026-11-12,16.0,2.0,6.0,1.0,0.0,0.0,0.0,1.0,2.0,3.0,0.0,0.0,1.0
+401909979,Christian Anderson,CHA,Charlotte Hornets,PHX,2026-11-12,18.0,13.0,0.0,2.0,3.0,6.0,4.0,9.0,2.0,0.0,2.0,0.0,0.0
+401909979,Dillon Brooks,PHX,Phoenix Suns,CHA,2026-11-12,30.0,15.0,3.0,1.0,3.0,6.0,6.0,13.0,0.0,0.0,0.0,1.0,0.0
+401909979,Miles Bridges,PHX,Phoenix Suns,CHA,2026-11-12,25.0,11.0,6.0,3.0,0.0,4.0,3.0,9.0,5.0,1.0,0.0,1.0,0.0
+401909979,Oso Ighodaro,PHX,Phoenix Suns,CHA,2026-11-12,32.0,2.0,3.0,7.0,0.0,0.0,1.0,2.0,2.0,0.0,0.0,0.0,1.0
+401909979,Devin Booker,PHX,Phoenix Suns,CHA,2026-11-12,35.0,30.0,1.0,7.0,4.0,8.0,12.0,20.0,2.0,0.0,2.0,3.0,1.0
+401909979,Jalen Green,PHX,Phoenix Suns,CHA,2026-11-12,21.0,12.0,4.0,0.0,1.0,4.0,3.0,9.0,6.0,1.0,2.0,1.0,0.0
+401909979,Ryan Dunn,PHX,Phoenix Suns,CHA,2026-11-12,10.0,0.0,4.0,0.0,0.0,1.0,0.0,2.0,0.0,2.0,0.0,1.0,0.0
+401909979,Khaman Maluach,PHX,Phoenix Suns,CHA,2026-11-12,16.0,4.0,2.0,1.0,0.0,0.0,2.0,4.0,0.0,1.0,1.0,0.0,2.0
+401909979,Luke Kennard,PHX,Phoenix Suns,CHA,2026-11-12,21.0,8.0,1.0,1.0,0.0,5.0,4.0,9.0,0.0,0.0,0.0,0.0,0.0
+401909979,Jordan Goodwin,PHX,Phoenix Suns,CHA,2026-11-12,24.0,6.0,5.0,2.0,2.0,6.0,2.0,11.0,0.0,4.0,0.0,2.0,0.0
+401909979,Collin Gillespie,PHX,Phoenix Suns,CHA,2026-11-12,27.0,13.0,2.0,1.0,3.0,9.0,5.0,13.0,0.0,0.0,2.0,2.0,0.0
