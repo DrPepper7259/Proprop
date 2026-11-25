@@ -5382,8 +5382,8 @@ GAME_ID,PLAYER_NAME,TEAM_ABBREVIATION,TEAM_NAME,OPP,GAME_DATE,MIN,PTS,REB,AST,FG
 401910029,John Collins,DET,Detroit Pistons,ATL,2026-11-22,22.0,18.0,6.0,0.0,4.0,5.0,6.0,9.0,2.0,1.0,1.0,1.0,1.0
 401910029,Kevin Huerter,DET,Detroit Pistons,ATL,2026-11-22,30.0,2.0,3.0,1.0,0.0,4.0,1.0,8.0,0.0,0.0,3.0,1.0,0.0
 401910029,Cade Cunningham,DET,Detroit Pistons,ATL,2026-11-22,33.0,5.0,4.0,15.0,1.0,3.0,2.0,9.0,0.0,0.0,6.0,1.0,1.0
-401910029,Ausar Thompson,DET,Detroit Pistons,ATL,2026-11-22,38.0,18.0,11.0,5.0,0.0,0.0,7.0,10.0,4.0,1.0,1.0,1.0,2.0
-401910029,Daniss Jenkins,DET,Detroit Pistons,ATL,2026-11-22,38.0,11.0,5.0,3.0,1.0,6.0,4.0,12.0,2.0,1.0,0.0,1.0,0.0
+401910029,Ausar Thompson,DET,Detroit Pistons,ATL,2026-11-22,38.0,18.0,12.0,5.0,0.0,0.0,7.0,10.0,4.0,1.0,1.0,1.0,2.0
+401910029,Daniss Jenkins,DET,Detroit Pistons,ATL,2026-11-22,38.0,11.0,4.0,3.0,1.0,6.0,4.0,12.0,2.0,1.0,0.0,1.0,0.0
 401910029,Paul Reed,DET,Detroit Pistons,ATL,2026-11-22,26.0,16.0,5.0,2.0,0.0,0.0,6.0,11.0,4.0,3.0,3.0,1.0,1.0
 401910029,Ronald Holland II,DET,Detroit Pistons,ATL,2026-11-22,10.0,2.0,4.0,0.0,0.0,0.0,1.0,6.0,0.0,2.0,0.0,0.0,1.0
 401910029,Javonte Green,DET,Detroit Pistons,ATL,2026-11-22,18.0,6.0,3.0,1.0,2.0,5.0,2.0,5.0,0.0,0.0,2.0,1.0,0.0
@@ -5391,17 +5391,17 @@ GAME_ID,PLAYER_NAME,TEAM_ABBREVIATION,TEAM_NAME,OPP,GAME_DATE,MIN,PTS,REB,AST,FG
 401910029,Onyeka Okongwu,ATL,Atlanta Hawks,DET,2026-11-22,29.0,6.0,9.0,2.0,1.0,4.0,2.0,9.0,2.0,3.0,1.0,0.0,1.0
 401910029,Jalen Johnson,ATL,Atlanta Hawks,DET,2026-11-22,30.0,12.0,11.0,0.0,0.0,3.0,4.0,10.0,4.0,6.0,3.0,1.0,0.0
 401910029,Nickeil Alexander-Walker,ATL,Atlanta Hawks,DET,2026-11-22,28.0,27.0,2.0,1.0,6.0,10.0,8.0,18.0,5.0,0.0,2.0,0.0,0.0
-401910029,Dyson Daniels,ATL,Atlanta Hawks,DET,2026-11-22,39.0,5.0,14.0,8.0,0.0,3.0,2.0,9.0,2.0,7.0,3.0,5.0,3.0
+401910029,Dyson Daniels,ATL,Atlanta Hawks,DET,2026-11-22,39.0,5.0,14.0,8.0,0.0,3.0,2.0,9.0,2.0,7.0,3.0,5.0,2.0
 401910029,Kingston Flemings,ATL,Atlanta Hawks,DET,2026-11-22,27.0,10.0,5.0,6.0,1.0,4.0,3.0,10.0,4.0,1.0,2.0,1.0,0.0
 401910029,Corey Kispert,ATL,Atlanta Hawks,DET,2026-11-22,19.0,18.0,4.0,3.0,4.0,10.0,7.0,13.0,0.0,2.0,0.0,1.0,0.0
 401910029,Zuby Ejiofor,ATL,Atlanta Hawks,DET,2026-11-22,19.0,4.0,4.0,1.0,0.0,4.0,2.0,9.0,0.0,2.0,0.0,0.0,0.0
 401910029,Luguentz Dort,ATL,Atlanta Hawks,DET,2026-11-22,31.0,16.0,7.0,1.0,2.0,7.0,4.0,10.0,6.0,3.0,1.0,3.0,0.0
 401910029,Aaron Wiggins,ATL,Atlanta Hawks,DET,2026-11-22,19.0,9.0,6.0,1.0,1.0,5.0,4.0,11.0,0.0,0.0,3.0,1.0,0.0
 401910030,Isaiah Hartenstein,OKC,Oklahoma City Thunder,MIA,2026-11-22,23.0,2.0,8.0,4.0,0.0,0.0,1.0,5.0,1.0,0.0,3.0,1.0,0.0
-401910030,Kenrich Williams,OKC,Oklahoma City Thunder,MIA,2026-11-22,26.0,12.0,4.0,2.0,2.0,4.0,5.0,10.0,1.0,2.0,3.0,1.0,0.0
+401910030,Kenrich Williams,OKC,Oklahoma City Thunder,MIA,2026-11-22,26.0,12.0,4.0,2.0,2.0,4.0,5.0,10.0,1.0,2.0,2.0,1.0,0.0
 401910030,Micah Peavy,OKC,Oklahoma City Thunder,MIA,2026-11-22,31.0,9.0,6.0,1.0,1.0,1.0,4.0,7.0,0.0,2.0,1.0,2.0,0.0
 401910030,Jared McCain,OKC,Oklahoma City Thunder,MIA,2026-11-22,29.0,20.0,2.0,3.0,2.0,7.0,7.0,17.0,5.0,0.0,1.0,0.0,0.0
-401910030,Ajay Mitchell,OKC,Oklahoma City Thunder,MIA,2026-11-22,22.0,17.0,3.0,3.0,2.0,3.0,6.0,17.0,5.0,2.0,3.0,2.0,0.0
+401910030,Ajay Mitchell,OKC,Oklahoma City Thunder,MIA,2026-11-22,22.0,17.0,3.0,3.0,2.0,3.0,6.0,17.0,5.0,2.0,4.0,2.0,0.0
 401910030,Brooks Barnhizer,OKC,Oklahoma City Thunder,MIA,2026-11-22,19.0,8.0,4.0,2.0,0.0,0.0,2.0,3.0,5.0,1.0,1.0,0.0,0.0
 401910030,Nique Clifford,OKC,Oklahoma City Thunder,MIA,2026-11-22,26.0,11.0,3.0,0.0,1.0,3.0,5.0,11.0,0.0,1.0,1.0,2.0,0.0
 401910030,Josh Dix,OKC,Oklahoma City Thunder,MIA,2026-11-22,32.0,13.0,5.0,4.0,3.0,5.0,5.0,8.0,0.0,2.0,0.0,0.0,0.0
@@ -5418,9 +5418,9 @@ GAME_ID,PLAYER_NAME,TEAM_ABBREVIATION,TEAM_NAME,OPP,GAME_DATE,MIN,PTS,REB,AST,FG
 401910030,Ryan Conwell,MIA,Miami Heat,OKC,2026-11-22,29.0,10.0,1.0,1.0,2.0,4.0,4.0,7.0,0.0,0.0,1.0,1.0,0.0
 401910031,Franz Wagner,ORL,Orlando Magic,WSH,2026-11-22,32.0,16.0,8.0,6.0,0.0,3.0,7.0,18.0,2.0,2.0,2.0,2.0,0.0
 401910031,Wendell Carter Jr.,ORL,Orlando Magic,WSH,2026-11-22,26.0,9.0,6.0,3.0,1.0,2.0,4.0,6.0,0.0,1.0,2.0,1.0,1.0
-401910031,Desmond Bane,ORL,Orlando Magic,WSH,2026-11-22,33.0,17.0,1.0,5.0,3.0,8.0,7.0,14.0,0.0,1.0,2.0,1.0,0.0
+401910031,Desmond Bane,ORL,Orlando Magic,WSH,2026-11-22,33.0,17.0,1.0,5.0,3.0,8.0,7.0,14.0,0.0,1.0,1.0,1.0,0.0
 401910031,Jalen Suggs,ORL,Orlando Magic,WSH,2026-11-22,22.0,9.0,4.0,2.0,0.0,6.0,2.0,11.0,5.0,1.0,0.0,0.0,0.0
-401910031,Anthony Black,ORL,Orlando Magic,WSH,2026-11-22,35.0,14.0,5.0,2.0,2.0,4.0,5.0,12.0,2.0,2.0,1.0,2.0,0.0
+401910031,Anthony Black,ORL,Orlando Magic,WSH,2026-11-22,35.0,14.0,5.0,2.0,2.0,4.0,5.0,12.0,2.0,2.0,2.0,2.0,0.0
 401910031,Jamal Cain,ORL,Orlando Magic,WSH,2026-11-22,9.0,2.0,1.0,0.0,0.0,0.0,1.0,2.0,0.0,0.0,0.0,0.0,0.0
 401910031,Tristan da Silva,ORL,Orlando Magic,WSH,2026-11-22,27.0,18.0,3.0,0.0,4.0,7.0,6.0,10.0,2.0,0.0,1.0,0.0,0.0
 401910031,Nikola Vucevic,ORL,Orlando Magic,WSH,2026-11-22,17.0,5.0,3.0,3.0,1.0,4.0,2.0,6.0,0.0,0.0,0.0,2.0,0.0
@@ -5754,3 +5754,73 @@ GAME_ID,PLAYER_NAME,TEAM_ABBREVIATION,TEAM_NAME,OPP,GAME_DATE,MIN,PTS,REB,AST,FG
 401910045,Malik Monk,SAC,Sacramento Kings,SA,2026-11-23,16.0,15.0,3.0,4.0,4.0,8.0,5.0,10.0,1.0,0.0,0.0,1.0,0.0
 401910045,Daeqwon Plowden,SAC,Sacramento Kings,SA,2026-11-23,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0
 401910045,Emanuel Sharp,SAC,Sacramento Kings,SA,2026-11-23,13.0,0.0,1.0,2.0,0.0,4.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0
+401909314,John Collins,DET,Detroit Pistons,ORL,2026-11-24,26.0,12.0,4.0,0.0,2.0,4.0,3.0,5.0,5.0,0.0,2.0,0.0,2.0
+401909314,Kevin Huerter,DET,Detroit Pistons,ORL,2026-11-24,32.0,13.0,6.0,5.0,1.0,3.0,6.0,10.0,0.0,0.0,1.0,1.0,0.0
+401909314,Isaiah Joe,DET,Detroit Pistons,ORL,2026-11-24,30.0,21.0,4.0,0.0,5.0,11.0,8.0,15.0,0.0,0.0,2.0,1.0,0.0
+401909314,Ausar Thompson,DET,Detroit Pistons,ORL,2026-11-24,31.0,6.0,10.0,7.0,0.0,0.0,3.0,3.0,0.0,2.0,2.0,1.0,4.0
+401909314,Daniss Jenkins,DET,Detroit Pistons,ORL,2026-11-24,35.0,15.0,4.0,10.0,1.0,6.0,6.0,16.0,2.0,2.0,5.0,2.0,0.0
+401909314,Paul Reed,DET,Detroit Pistons,ORL,2026-11-24,22.0,9.0,6.0,1.0,0.0,0.0,3.0,6.0,5.0,2.0,2.0,2.0,0.0
+401909314,Ronald Holland II,DET,Detroit Pistons,ORL,2026-11-24,17.0,13.0,3.0,1.0,2.0,5.0,5.0,9.0,2.0,0.0,0.0,1.0,0.0
+401909314,Javonte Green,DET,Detroit Pistons,ORL,2026-11-24,27.0,6.0,2.0,1.0,2.0,4.0,2.0,5.0,0.0,0.0,1.0,4.0,0.0
+401909314,Elijah Harkless,DET,Detroit Pistons,ORL,2026-11-24,14.0,7.0,1.0,2.0,2.0,3.0,2.0,9.0,1.0,1.0,1.0,0.0,0.0
+401909314,Chaz Lanier,DET,Detroit Pistons,ORL,2026-11-24,7.0,2.0,2.0,0.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0,0.0,0.0
+401909314,Franz Wagner,ORL,Orlando Magic,DET,2026-11-24,38.0,20.0,9.0,6.0,0.0,5.0,9.0,20.0,2.0,1.0,2.0,0.0,1.0
+401909314,Wendell Carter Jr.,ORL,Orlando Magic,DET,2026-11-24,38.0,9.0,13.0,2.0,1.0,3.0,3.0,10.0,2.0,2.0,1.0,3.0,0.0
+401909314,Desmond Bane,ORL,Orlando Magic,DET,2026-11-24,34.0,21.0,1.0,5.0,4.0,7.0,8.0,13.0,1.0,0.0,4.0,1.0,0.0
+401909314,Jalen Suggs,ORL,Orlando Magic,DET,2026-11-24,33.0,4.0,3.0,5.0,0.0,2.0,2.0,8.0,0.0,0.0,3.0,2.0,0.0
+401909314,Anthony Black,ORL,Orlando Magic,DET,2026-11-24,28.0,5.0,4.0,2.0,0.0,2.0,2.0,8.0,3.0,2.0,5.0,0.0,1.0
+401909314,Jamal Cain,ORL,Orlando Magic,DET,2026-11-24,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+401909314,Tristan da Silva,ORL,Orlando Magic,DET,2026-11-24,33.0,16.0,3.0,1.0,4.0,11.0,6.0,13.0,0.0,1.0,1.0,0.0,0.0
+401909314,Goga Bitadze,ORL,Orlando Magic,DET,2026-11-24,13.0,2.0,8.0,1.0,0.0,0.0,1.0,3.0,0.0,4.0,3.0,0.0,1.0
+401909314,Jevon Carter,ORL,Orlando Magic,DET,2026-11-24,19.0,9.0,0.0,0.0,3.0,6.0,3.0,6.0,0.0,0.0,1.0,2.0,1.0
+401909314,Alex Morales,ORL,Orlando Magic,DET,2026-11-24,1.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0
+401909314,Jase Richardson,ORL,Orlando Magic,DET,2026-11-24,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+401909315,Paul George,BOS,Boston Celtics,WSH,2026-11-24,33.0,28.0,4.0,9.0,6.0,9.0,11.0,20.0,0.0,0.0,1.0,1.0,0.0
+401909315,Jayson Tatum,BOS,Boston Celtics,WSH,2026-11-24,37.0,41.0,6.0,8.0,6.0,15.0,13.0,25.0,14.0,0.0,3.0,1.0,2.0
+401909315,Sam Hauser,BOS,Boston Celtics,WSH,2026-11-24,22.0,4.0,3.0,1.0,1.0,3.0,1.0,4.0,2.0,1.0,0.0,1.0,1.0
+401909315,Neemias Queta,BOS,Boston Celtics,WSH,2026-11-24,25.0,21.0,5.0,2.0,0.0,0.0,9.0,11.0,3.0,3.0,2.0,1.0,2.0
+401909315,Derrick White,BOS,Boston Celtics,WSH,2026-11-24,30.0,6.0,7.0,5.0,2.0,6.0,2.0,10.0,0.0,0.0,0.0,1.0,0.0
+401909315,Chris Cenac Jr.,BOS,Boston Celtics,WSH,2026-11-24,6.0,0.0,2.0,1.0,0.0,0.0,0.0,1.0,0.0,2.0,0.0,1.0,0.0
+401909315,Luka Garza,BOS,Boston Celtics,WSH,2026-11-24,18.0,7.0,4.0,0.0,1.0,1.0,3.0,3.0,0.0,2.0,1.0,1.0,0.0
+401909315,Payton Pritchard,BOS,Boston Celtics,WSH,2026-11-24,28.0,14.0,4.0,2.0,4.0,11.0,4.0,14.0,2.0,0.0,2.0,1.0,0.0
+401909315,Ron Harper Jr.,BOS,Boston Celtics,WSH,2026-11-24,8.0,2.0,0.0,0.0,0.0,2.0,1.0,3.0,2.0,0.0,0.0,0.0,0.0
+401909315,Baylor Scheierman,BOS,Boston Celtics,WSH,2026-11-24,19.0,8.0,4.0,1.0,2.0,4.0,2.0,7.0,2.0,2.0,1.0,0.0,0.0
+401909315,Jordan Walsh,BOS,Boston Celtics,WSH,2026-11-24,5.0,0.0,2.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0
+401909315,Hugo Gonzalez,BOS,Boston Celtics,WSH,2026-11-24,9.0,0.0,5.0,0.0,0.0,0.0,0.0,1.0,0.0,2.0,0.0,0.0,1.0
+401909315,Anthony Davis,WSH,Washington Wizards,BOS,2026-11-24,37.0,33.0,13.0,1.0,1.0,3.0,12.0,21.0,10.0,5.0,2.0,2.0,1.0
+401909315,AJ Dybantsa,WSH,Washington Wizards,BOS,2026-11-24,41.0,20.0,11.0,7.0,2.0,6.0,7.0,18.0,5.0,3.0,3.0,0.0,0.0
+401909315,Kyshawn George,WSH,Washington Wizards,BOS,2026-11-24,38.0,24.0,9.0,3.0,4.0,12.0,9.0,20.0,2.0,0.0,1.0,1.0,0.0
+401909315,Alex Sarr,WSH,Washington Wizards,BOS,2026-11-24,24.0,7.0,2.0,0.0,1.0,3.0,3.0,6.0,0.0,1.0,0.0,0.0,1.0
+401909315,Trae Young,WSH,Washington Wizards,BOS,2026-11-24,35.0,17.0,0.0,12.0,1.0,2.0,4.0,9.0,9.0,0.0,1.0,2.0,0.0
+401909315,Khris Middleton,WSH,Washington Wizards,BOS,2026-11-24,18.0,0.0,5.0,0.0,0.0,1.0,0.0,2.0,0.0,1.0,2.0,0.0,0.0
+401909315,Deandre Ayton,WSH,Washington Wizards,BOS,2026-11-24,5.0,0.0,2.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0,0.0,0.0
+401909315,Tre Mann,WSH,Washington Wizards,BOS,2026-11-24,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+401909315,Bub Carrington,WSH,Washington Wizards,BOS,2026-11-24,7.0,0.0,2.0,0.0,0.0,1.0,0.0,1.0,0.0,1.0,0.0,0.0,1.0
+401909315,Bilal Coulibaly,WSH,Washington Wizards,BOS,2026-11-24,22.0,10.0,3.0,1.0,2.0,5.0,4.0,7.0,0.0,1.0,1.0,0.0,0.0
+401909315,Will Riley,WSH,Washington Wizards,BOS,2026-11-24,5.0,5.0,0.0,0.0,1.0,1.0,2.0,4.0,0.0,0.0,0.0,0.0,0.0
+401909315,Tre Johnson,WSH,Washington Wizards,BOS,2026-11-24,8.0,0.0,1.0,0.0,0.0,2.0,0.0,3.0,0.0,1.0,2.0,0.0,0.0
+401909316,Caleb Martin,DAL,Dallas Mavericks,DEN,2026-11-24,30.0,13.0,4.0,4.0,3.0,6.0,5.0,8.0,0.0,2.0,1.0,5.0,2.0
+401909316,Daniel Gafford,DAL,Dallas Mavericks,DEN,2026-11-24,27.0,13.0,6.0,3.0,0.0,0.0,6.0,8.0,4.0,2.0,2.0,1.0,2.0
+401909316,Cooper Flagg,DAL,Dallas Mavericks,DEN,2026-11-24,31.0,24.0,6.0,12.0,1.0,4.0,8.0,17.0,9.0,0.0,1.0,0.0,0.0
+401909316,Zaccharie Risacher,DAL,Dallas Mavericks,DEN,2026-11-24,21.0,12.0,6.0,1.0,1.0,2.0,5.0,8.0,2.0,3.0,1.0,1.0,1.0
+401909316,Kyrie Irving,DAL,Dallas Mavericks,DEN,2026-11-24,34.0,11.0,5.0,6.0,1.0,8.0,5.0,19.0,0.0,1.0,1.0,1.0,1.0
+401909316,P.J. Washington,DAL,Dallas Mavericks,DEN,2026-11-24,25.0,14.0,6.0,0.0,1.0,3.0,6.0,11.0,2.0,1.0,0.0,2.0,1.0
+401909316,Naji Marshall,DAL,Dallas Mavericks,DEN,2026-11-24,22.0,14.0,1.0,2.0,1.0,5.0,6.0,13.0,1.0,0.0,1.0,1.0,0.0
+401909316,Santi Aldama,DAL,Dallas Mavericks,DEN,2026-11-24,10.0,3.0,1.0,0.0,1.0,2.0,1.0,2.0,0.0,1.0,1.0,0.0,0.0
+401909316,Morez Johnson Jr.,DAL,Dallas Mavericks,DEN,2026-11-24,19.0,9.0,10.0,1.0,1.0,4.0,4.0,7.0,0.0,3.0,2.0,1.0,0.0
+401909316,Moussa Cisse,DAL,Dallas Mavericks,DEN,2026-11-24,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+401909316,Max Christie,DAL,Dallas Mavericks,DEN,2026-11-24,4.0,2.0,1.0,0.0,0.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,0.0
+401909316,Walter Clayton Jr.,DAL,Dallas Mavericks,DEN,2026-11-24,14.0,5.0,2.0,2.0,1.0,3.0,2.0,5.0,0.0,0.0,1.0,1.0,0.0
+401909316,Aaron Gordon,DEN,Denver Nuggets,DAL,2026-11-24,24.0,1.0,3.0,3.0,0.0,3.0,0.0,3.0,2.0,1.0,0.0,0.0,1.0
+401909316,Cameron Johnson,DEN,Denver Nuggets,DAL,2026-11-24,34.0,17.0,5.0,3.0,4.0,11.0,5.0,15.0,4.0,2.0,2.0,0.0,0.0
+401909316,Nikola Jokic,DEN,Denver Nuggets,DAL,2026-11-24,33.0,18.0,11.0,5.0,1.0,4.0,6.0,14.0,5.0,2.0,5.0,1.0,0.0
+401909316,Jamal Murray,DEN,Denver Nuggets,DAL,2026-11-24,36.0,20.0,2.0,3.0,2.0,8.0,6.0,17.0,6.0,0.0,2.0,0.0,2.0
+401909316,Christian Braun,DEN,Denver Nuggets,DAL,2026-11-24,29.0,15.0,2.0,4.0,3.0,6.0,5.0,8.0,2.0,0.0,1.0,1.0,1.0
+401909316,Alpha Diallo,DEN,Denver Nuggets,DAL,2026-11-24,3.0,2.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,0.0,2.0,0.0,0.0
+401909316,Marvin Bagley III,DEN,Denver Nuggets,DAL,2026-11-24,12.0,9.0,3.0,0.0,1.0,1.0,4.0,7.0,0.0,3.0,0.0,0.0,0.0
+401909316,Zeke Nnaji,DEN,Denver Nuggets,DAL,2026-11-24,3.0,1.0,1.0,0.0,0.0,0.0,0.0,3.0,2.0,1.0,0.0,1.0,0.0
+401909316,DaRon Holmes II,DEN,Denver Nuggets,DAL,2026-11-24,3.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0
+401909316,Spencer Jones,DEN,Denver Nuggets,DAL,2026-11-24,22.0,7.0,3.0,1.0,1.0,3.0,2.0,4.0,2.0,0.0,1.0,1.0,0.0
+401909316,Trevon Brazile,DEN,Denver Nuggets,DAL,2026-11-24,12.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,1.0
+401909316,DeMar DeRozan,DEN,Denver Nuggets,DAL,2026-11-24,17.0,9.0,5.0,1.0,0.0,1.0,4.0,8.0,1.0,1.0,2.0,1.0,0.0
+401909316,Tyus Jones,DEN,Denver Nuggets,DAL,2026-11-24,12.0,2.0,2.0,1.0,0.0,1.0,1.0,4.0,0.0,1.0,2.0,0.0,1.0
